@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		AB864DCA26C624E6007AD95F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB864DC926C624E6007AD95F /* main.cpp */; };
+		AB864DD226C62553007AD95F /* libassimp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB864DD126C62553007AD95F /* libassimp.dylib */; };
+		AB864DD426C6255A007AD95F /* libGLEW.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB864DD326C6255A007AD95F /* libGLEW.dylib */; };
+		AB864DD626C6255E007AD95F /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB864DD526C6255E007AD95F /* libglfw.dylib */; };
+		AB864DD826C625BA007AD95F /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = AB864DD726C625BA007AD95F /* glad.c */; };
+		AB864DDD26C62772007AD95F /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB864DD926C62772007AD95F /* Camera.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,22 @@
 /* Begin PBXFileReference section */
 		AB864DC626C624E6007AD95F /* OpenGL_Test25_Bloom */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenGL_Test25_Bloom; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB864DC926C624E6007AD95F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		AB864DD126C62553007AD95F /* libassimp.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.dylib; path = ../../../assimp/5.0.1/lib/libassimp.dylib; sourceTree = "<group>"; };
+		AB864DD326C6255A007AD95F /* libGLEW.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.dylib; path = ../../../glew/2.2.0_1/lib/libGLEW.dylib; sourceTree = "<group>"; };
+		AB864DD526C6255E007AD95F /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = ../../../glfw/3.3.4/lib/libglfw.dylib; sourceTree = "<group>"; };
+		AB864DD726C625BA007AD95F /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = glad.c; path = ../../../../glad/src/glad.c; sourceTree = "<group>"; };
+		AB864DD926C62772007AD95F /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
+		AB864DDA26C62772007AD95F /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		AB864DDB26C62772007AD95F /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		AB864DDC26C62772007AD95F /* Camera.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Camera.hpp; sourceTree = "<group>"; };
+		AB864DE826C62833007AD95F /* BloomFinal.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = BloomFinal.vs; sourceTree = "<group>"; };
+		AB864DE926C62833007AD95F /* LightBox.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = LightBox.fs; sourceTree = "<group>"; };
+		AB864DEA26C62833007AD95F /* Bloom.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Bloom.fs; sourceTree = "<group>"; };
+		AB864DEB26C62833007AD95F /* Blur.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Blur.fs; sourceTree = "<group>"; };
+		AB864DEC26C62833007AD95F /* Blur.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Blur.vs; sourceTree = "<group>"; };
+		AB864DED26C62833007AD95F /* Bloom.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Bloom.vs; sourceTree = "<group>"; };
+		AB864DEE26C62833007AD95F /* LightBox.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = LightBox.vs; sourceTree = "<group>"; };
+		AB864DEF26C62833007AD95F /* BloomFinal.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = BloomFinal.fs; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB864DD226C62553007AD95F /* libassimp.dylib in Frameworks */,
+				AB864DD426C6255A007AD95F /* libGLEW.dylib in Frameworks */,
+				AB864DD626C6255E007AD95F /* libglfw.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +67,7 @@
 			children = (
 				AB864DC826C624E6007AD95F /* OpenGL_Test25_Bloom */,
 				AB864DC726C624E6007AD95F /* Products */,
+				AB864DD026C62553007AD95F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +82,40 @@
 		AB864DC826C624E6007AD95F /* OpenGL_Test25_Bloom */ = {
 			isa = PBXGroup;
 			children = (
+				AB864DE726C62833007AD95F /* LightShader */,
+				AB864DD926C62772007AD95F /* Camera.cpp */,
+				AB864DDC26C62772007AD95F /* Camera.hpp */,
+				AB864DDB26C62772007AD95F /* Shader.h */,
+				AB864DDA26C62772007AD95F /* stb_image.h */,
+				AB864DD726C625BA007AD95F /* glad.c */,
 				AB864DC926C624E6007AD95F /* main.cpp */,
 			);
 			path = OpenGL_Test25_Bloom;
+			sourceTree = "<group>";
+		};
+		AB864DD026C62553007AD95F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB864DD526C6255E007AD95F /* libglfw.dylib */,
+				AB864DD326C6255A007AD95F /* libGLEW.dylib */,
+				AB864DD126C62553007AD95F /* libassimp.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB864DE726C62833007AD95F /* LightShader */ = {
+			isa = PBXGroup;
+			children = (
+				AB864DED26C62833007AD95F /* Bloom.vs */,
+				AB864DEA26C62833007AD95F /* Bloom.fs */,
+				AB864DEE26C62833007AD95F /* LightBox.vs */,
+				AB864DE926C62833007AD95F /* LightBox.fs */,
+				AB864DEC26C62833007AD95F /* Blur.vs */,
+				AB864DEB26C62833007AD95F /* Blur.fs */,
+				AB864DE826C62833007AD95F /* BloomFinal.vs */,
+				AB864DEF26C62833007AD95F /* BloomFinal.fs */,
+			);
+			path = LightShader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +175,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB864DCA26C624E6007AD95F /* main.cpp in Sources */,
+				AB864DDD26C62772007AD95F /* Camera.cpp in Sources */,
+				AB864DD826C625BA007AD95F /* glad.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +298,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../assimp/5.0.1/include\"",
+					"\"$(SRCROOT)/../../../glad/include\"",
+					"\"$(SRCROOT)/../../../glew/2.2.0_1/include\"",
+					"\"$(SRCROOT)/../../../glfw/3.3.4/include\"",
+					"\"$(SRCROOT)/../../../glm/0.9.9.8/include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../glfw/3.3.4/lib\"",
+					"\"$(SRCROOT)/../../../glew/2.2.0_1/lib\"",
+					"\"$(SRCROOT)/../../../assimp/5.0.1/lib\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,6 +318,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../assimp/5.0.1/include\"",
+					"\"$(SRCROOT)/../../../glad/include\"",
+					"\"$(SRCROOT)/../../../glew/2.2.0_1/include\"",
+					"\"$(SRCROOT)/../../../glfw/3.3.4/include\"",
+					"\"$(SRCROOT)/../../../glm/0.9.9.8/include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../glfw/3.3.4/lib\"",
+					"\"$(SRCROOT)/../../../glew/2.2.0_1/lib\"",
+					"\"$(SRCROOT)/../../../assimp/5.0.1/lib\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
